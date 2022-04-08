@@ -1,0 +1,22 @@
+{   "manifest_version": 2,
+    "name": "Teste Extensions IXC",
+    "description": "Primeiro teste IXC",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["https://assinante.nmultifibra.com.br/adm.php"],
+            "js": ["content.js"]
+        }
+    ],
+    "background.service_worker": {
+        "page": "background/background.html",
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "browser_action": {
+        "default_popup": "./popup/index.html",
+        "scripts": ["./popup/popup.js"]
+    },
+    "permissions": ["tabs", "storage"]
+}
