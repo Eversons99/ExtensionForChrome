@@ -1,22 +1,25 @@
-{   "manifest_version": 2,
-    "name": "Teste Extensions IXC",
-    "description": "Primeiro teste IXC",
+{   
+    "manifest_version": 2,
+    "name": "Test Extensions IXC",
+    "description": "Extensão para editar os SNS dos equipamentos e salva-los",
     "version": "1.0",
     "content_scripts": [
         {
-            "matches": ["https://assinante.nmultifibra.com.br/adm.php"],
+            "matches": ["<all_urls>"],
             "js": ["content.js"]
         }
     ],
-    "background.service_worker": {
+    "background": {
         "page": "background/background.html",
-        "scripts": ["background.js"],
         "persistent": false
     },
-
+    "options_ui": {
+        "open_in_tab": true,
+        "page": "background/background.html" 
+    },  
     "browser_action": {
-        "default_popup": "./popup/index.html",
-        "scripts": ["./popup/popup.js"]
+        "default_title": "First Teste IXC",
+        "default_popup": "./popup/index.html"
     },
     "permissions": ["tabs", "storage"]
 }

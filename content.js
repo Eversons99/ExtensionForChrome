@@ -1,6 +1,12 @@
+//Roda no background do  navegador
+chrome.runtime.onMessege.addListtener(function (response, sender, SendResponse){
+    alert(response)
+})
+//alert("Estou no ixcholas e agora em todas as URLs")
+
 //Este é o unico arquivo que consegue interagir e alterar dados da pagina web
 //Pega os Inputs
-function getInputSNs(){
+/*function getInputSNs(){
     const inputSNs =  document.getElementById('AllSNs').value
     console.log(inputSNs)
     const splitSN = inputSNs.split("\n")
@@ -15,7 +21,7 @@ function getInputSNs(){
     inputSN(splitSN)
     
   }
-  
+  /*
   //Pega tabela com o registros
   function getTable(){
     let tableMain =  document.getElementById('grid_1').childNodes[0]
@@ -26,7 +32,7 @@ function getInputSNs(){
   }
   
   //insere os SNS e salva
-  async function inputSN(splitSN){
+  /*async function inputSN(splitSN){
   
     const arraySns = splitSN
   
@@ -42,7 +48,7 @@ function getInputSNs(){
         7898951027928, 
         7898951027929
     ]*/
-    
+    /*
     let totalOfPages = Math.ceil(arraySns.length / 30)
     
     for(let i = 0; i < totalOfPages; i++) {
@@ -77,7 +83,7 @@ function getInputSNs(){
   }
   
   //Salva as alterações e troca fecha a pagina
-  function saveChange(){
+  /*function saveChange(){
     setTimeout(() => {
         const btnSave = document.querySelector('.disab')
         //btnSave.click()
@@ -89,19 +95,19 @@ function getInputSNs(){
   }
   
   //Função "Cronometro"await sleep(2)
-  async function sleep(time){
+  /*async function sleep(time){
     return new Promise(function (resolve, reject){
         setTimeout(() => {  
             resolve()
         }, time * 1000)
          
     })
-  }
+  }*/
   
-  document.getElementById("prosseguir").addEventListener("click", getInputSNs);
+  //document.getElementById("prosseguir").addEventListener("click", getInputSNs);
   
 /*
-alert("Estou no ixcholas")
+
 
 function testeClickCadastros(){
     let btnSave = document.querySelector('.submenu_title')
