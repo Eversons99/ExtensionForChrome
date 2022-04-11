@@ -5,18 +5,10 @@
     "version": "1.0",
     "content_scripts": [
         {
-            "matches": ["<all_urls>"],
+            "matches": ["https://assinante.nmultifibra.com.br/adm.php"],
             "js": ["content.js"]
         }
     ],
-    "background": {
-        "page": "background/background.html",
-        "persistent": false
-    },
-    "options_ui": {
-        "open_in_tab": true,
-        "page": "background/background.html" 
-    },  
     "browser_action": {
         "default_title": "First Teste IXC",
         "default_popup": "./popup/index.html"
