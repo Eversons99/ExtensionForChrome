@@ -42,7 +42,7 @@ function awaitProcessing(contentBtn){
     chrome.runtime.onMessage.addListener(
     function(request) {
         const myData = request.newTextContent
-        newBtn.textContent = myData
+        newBtn.innerHTML = myData
         divButton.append(newBtn)
         btnMain.style.display = 'none'
     }
