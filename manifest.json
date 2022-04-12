@@ -17,5 +17,5 @@
         "default_title": "First Teste IXC",
         "default_popup": "./popup/index.html"
     },
-    "permissions": ["tabs"]
+    "permissions": ["tabs"] 
 }
