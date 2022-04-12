@@ -37,6 +37,9 @@ body {
   
 textarea{
   height: 30vh;
+  border-radius: 10px;
+  margin-top: 16px;
+  border-width: 2px;
 }
   
 .btn{
@@ -49,8 +52,7 @@ textarea{
   background: #4e9ff4;
   margin: 16px;
   font-size: 16px;
-  min-width: 150px;
-  min-height: 50px;
+  min-height: 55px;
   min-width: max-content;
   transition: 0.2s;
   color: white;

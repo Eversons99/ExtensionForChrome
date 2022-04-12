@@ -55,7 +55,7 @@ function awaitProcessing(contentBtn){
         textarea.style.display = 'flex'
         textarea.value = ''
         btnMain.textContent = "Prosseguir"
-        btnMain.style.display = 'flex'
+        btnMain.style.display = 'block'
         newBtn.style.display = 'none'
         btnMain.disabled = false
     })
