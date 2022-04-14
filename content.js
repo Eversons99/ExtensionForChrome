@@ -35,15 +35,16 @@ async function inputSN(allSNs){
                 let newUpdateRegister = getTable()
                 newUpdateRegister[i].dispatchEvent(new MouseEvent ('dblclick', {bubble: true}))
                 const serialNumber = document.getElementById('serial_fornecedor')
-                await sleep(2)
+                await sleep(3)
                 serialNumber.value = arraySns[i] 
-                await sleep(2)
+                await sleep(3)
                 saveChange()
-                await sleep(2)
+                await sleep(3)
             }
             if( i >= updateRegister.length){
                 const nextBtn = document.querySelector(".fa-forward").click()
                 arraySns.splice(0, updateRegister.length)
+                await sleep(2)
                 break
             }
         }  
@@ -96,7 +97,7 @@ function saveChange(){
 
         const btnClose = document.querySelectorAll('.fa-times')[2]
         btnClose.click()
-     }, 2000)
+     }, 1000)
 }
   
 //Função "Cronometro"
