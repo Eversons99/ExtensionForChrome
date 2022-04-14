@@ -4,7 +4,8 @@
     "description": "Extensions to assist in the insertion of the equipment series in the IXC",
     "version": "1.0",
     "icons":{
-        "16": "images/icon_128.png"
+        "16": "images/icon_128.png",
+        "48": "images/icon_128.png"
     },
     "content_scripts": [
         {

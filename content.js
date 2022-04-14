@@ -12,10 +12,11 @@ chrome.runtime.onMessage.addListener(
 
 //Pega tabela com o registros
 function getTable(){
-    let tableMain =  document.getElementById('grid_1').childNodes[0]
-    let countRegister = tableMain.childNodes
+    //let tableMain =  document.getElementById('grid_1').childNodes[0]
+    let tableMain =  document.querySelector('tbody').childNodes
+    //let countRegister = tableMain.childNodes
   
-    return countRegister
+    return tableMain
 }
   
 //insere os SNS e salva
@@ -23,15 +24,47 @@ async function inputSN(allSNs){
     
     loadingAnimation()
     const arraySns = allSNs
-  
-    let totalOfPages = Math.ceil(arraySns.length / 30)
+    let updateRegister = getTable()
+    let totalOfPages = Math.ceil(arraySns.length / updateRegister.length)
+    
+    for(let i = 0; i < totalOfPages; i++) {
+        for(let i in arraySns){
+    
+            if(i < updateRegister.length){
+
+                let newUpdateRegister = getTable()
+                newUpdateRegister[i].dispatchEvent(new MouseEvent ('dblclick', {bubble: true}))
+                const serialNumber = document.getElementById('serial_fornecedor')
+                await sleep(2)
+                serialNumber.value = arraySns[i] 
+                await sleep(2)
+                saveChange()
+                await sleep(2)
+            }
+            if( i >= updateRegister.length){
+                const nextBtn = document.querySelector(".fa-forward").click()
+                arraySns.splice(0, updateRegister.length)
+                break
+            }
+        }  
+    }
+
+    loadingAnimation(false)
+    chrome.runtime.sendMessage({newTextContent: "Nova inserção"})
+    
+    /*
+    loadingAnimation()
+    const arraySns = allSNs
+    let countRegister = getTable()
+    let totalOfPages = Math.ceil(arraySns.length / countRegister.length)
+    console.log(totalOfPages)
     
     for(let i = 0; i < totalOfPages; i++) {
         //Atualizando a tabela
         let countRegister = getTable()
   
         for(let y in arraySns){
-            if(y <= 29){
+            if(y <= countRegister.length){
                 let countRegister = getTable()
                 countRegister[y].dispatchEvent(new MouseEvent ('dblclick', {bubble: true}))
                 const serialNumber = document.getElementById('serial_fornecedor')
@@ -42,7 +75,7 @@ async function inputSN(allSNs){
                 await sleep(2)
             }
   
-            if (y >= 30){
+            if (y >= countRegister.length){
                 let nextBtn = document.querySelector(".fa-forward").click()  
                 arraySns.splice(0, 30)    
                 break;
@@ -52,6 +85,7 @@ async function inputSN(allSNs){
 
     loadingAnimation(false)
     chrome.runtime.sendMessage({newTextContent: "Nova inserção"})
+    */
 }
   
 //Salva as alterações e troca fecha a pagina
@@ -62,7 +96,7 @@ function saveChange(){
 
         const btnClose = document.querySelectorAll('.fa-times')[2]
         btnClose.click()
-     }, 1000)
+     }, 2000)
 }
   
 //Função "Cronometro"
