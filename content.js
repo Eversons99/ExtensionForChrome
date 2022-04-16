@@ -93,7 +93,7 @@ async function inputSN(allSNs){
 function saveChange(){
     setTimeout(() => {
         const btnSave = document.querySelector('.disab')
-        //btnSave.click()
+        btnSave.click()
 
         const btnClose = document.querySelectorAll('.fa-times')[2]
         btnClose.click()
