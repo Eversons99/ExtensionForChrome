@@ -12,6 +12,7 @@
 }
 
 .modal {
+    color: #4e9ff4;
     display: flex;
     flex-direction: column;
     background: white;
