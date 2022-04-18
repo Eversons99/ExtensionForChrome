@@ -4,26 +4,39 @@ const btn = document.getElementById('prosseguir')
 btn.addEventListener("click", getSerialNumber)
 
 function getSerialNumber(){
-    const inputSNs =  document.getElementById('AllSNs').value
 
-    if (inputSNs.length <= 0) return alert("Por gentileza insira os SNs no campo acima para prosseguir")
+    const nf = document.getElementById('nf').value
+    const confirmSelect = document.querySelector('#mySelect').value
+    if(!nf) return alert("O campo não aceita letras e não pode estar vazio")
+    if(confirmSelect == '') return alert("Selecione algum modelo de equipamento")
+
+
+    document.querySelector('.main').style.display = 'none'
+    document.querySelector('.serial-Number').style.display = 'block'
+
+    
+    const btn2 = document.getElementById('prosseguir2')
+    btn2.addEventListener("click", ()=>{
+        const equipamentModel = document.getElementById('mySelect').value
+        const inputSNs = document.getElementById('AllSNs').value
+        if (inputSNs.length <= 0) return alert("O campo acima não pode estar vazio")
   
-    const allSNs = inputSNs.split("\n")
+        const allSNs = inputSNs.split("\n")
+        allSNs.forEach((sn, index) => {
+            if(sn == ''){
+                allSNs.splice(index, 1)
+            }
+        })
         
-    allSNs.forEach((sn, index) => {
-        if(sn == ''){
-            allSNs.splice(index, 1)
-        }
+        //Encaminha uma mensagem para outra parte do meu projeto contendo o array de dados já tratado
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, {sns: allSNs, NF: nf, equipament: equipamentModel}, function(response){
+                const contentBtn = response.contentBtn
+                console.log(contentBtn)
+                //awaitProcessing(contentBtn)
+            })
+        });
     })
-
-    //Encaminha uma mensagem para outra parte do meu projeto contendo o array de dados já tratado
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {sns: allSNs}, function(response) {
-            const contentBtn = response.contentBtn
-            awaitProcessing(contentBtn)
-          })
-    })
-
 }
 
 function awaitProcessing(contentBtn){
@@ -40,13 +53,13 @@ function awaitProcessing(contentBtn){
     btnMain.disabled = true
 
     chrome.runtime.onMessage.addListener(
-    function(request) {
-        const myData = request.newTextContent
-        newBtn.innerHTML = myData
-        divButton.append(newBtn)
-        btnMain.style.display = 'none'
-    }
-)
+        function(request) {
+            const myData = request.newTextContent
+            newBtn.innerHTML = myData
+            divButton.append(newBtn)
+            btnMain.style.display = 'none'
+        }
+    )
 
     newBtn.addEventListener("click", ()=>{
         const textarea = document.getElementsByTagName('textarea')[0]
@@ -61,7 +74,6 @@ function awaitProcessing(contentBtn){
     })
 
 }
-
 
 
 /*

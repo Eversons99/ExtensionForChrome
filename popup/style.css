@@ -9,6 +9,7 @@ body {
 .container{
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: auto 10vh;
   flex-direction: column;
 }
@@ -31,14 +32,13 @@ body {
 .main{
   display: flex;
   justify-content: center;
-  margin: 2vh;
   flex-direction: column;
 }
   
 textarea{
   height: 30vh;
+  margin-top: 2vh;
   border-radius: 10px;
-  margin-top: 16px;
   border-width: 2px;
 }
   
@@ -50,7 +50,8 @@ textarea{
 .home-button{
   justify-content: center;
   background: #4e9ff4;
-  margin: 16px;
+  margin: 3vh;
+  margin-bottom: 7vh;
   font-size: 16px;
   min-height: 55px;
   min-width: max-content;
@@ -60,9 +61,32 @@ textarea{
   border: none;
   border-radius: 4px;
   max-width: 70%;
-    
 }
 
 button{
   text-align: center;
+}
+
+#nf {
+  height: 10vh;
+  border-radius: 10px;
+  margin: 3vh;
+  margin-top: 6vh;
+  border-width: 2px;
+}
+.serial-Number {
+  display: none;
+  flex-direction: column;
+  margin: 1vh;
+}
+.selectEquipament {
+  display: flex;
+  flex-direction: column;
+  margin: 3vh;
+}
+
+select{
+  height: 12vh;
+  border-radius: 10px;
+  border-width: 2px;
 }
