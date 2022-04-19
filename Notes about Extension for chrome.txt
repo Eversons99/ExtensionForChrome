@@ -1,0 +1,76 @@
+URL:
+https://assinante.nmultifibra.com.br/aplicativ/patrimonio/action/action.php?action=grid
+
+FORM:
+page: 1
+rp: 29
+sortname: patrimonio.serial_fornecedor
+sortorder: asc
+query: 
+qtype: patrimonio.id
+oper: L
+grid_param: [{"TB":"patrimonio.data_aquisicao","display":"Data Aquisição","OP":"=","P":"2022-04-16","C":"AND","G":"_patrimonio.data_aquisicao"}]
+grid_param2: false
+display: Código
+
+RESPONSE:
+{"page":"1","total":"110","rows":[{"id":"53652","autoincrement":{"campo":"id","valor":"53652"},"cell":["53652","","","FH1XC","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53653","autoincrement":{"campo":"id","valor":"53653"},"cell":["53653","","","TJGPJ","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53654","autoincrement":{"campo":"id","valor":"53654"},"cell":["53654","","","ZZTTP","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53655","autoincrement":{"campo":"id","valor":"53655"},"cell":["53655","","","Z1ZYY","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53656","autoincrement":{"campo":"id","valor":"53656"},"cell":["53656","","","TSA9R","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53657","autoincrement":{"campo":"id","valor":"53657"},"cell":["53657","","","9XOLV","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53658","autoincrement":{"campo":"id","valor":"53658"},"cell":["53658","","","WTB3H","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53659","autoincrement":{"campo":"id","valor":"53659"},"cell":["53659","","","YF5Y1","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53660","autoincrement":{"campo":"id","valor":"53660"},"cell":["53660","","","CADYZ","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53661","autoincrement":{"campo":"id","valor":"53661"},"cell":["53661","","","6QFQL","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53662","autoincrement":{"campo":"id","valor":"53662"},"cell":["53662","","","Q5LKS","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53663","autoincrement":{"campo":"id","valor":"53663"},"cell":["53663","","","H4XAU","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53664","autoincrement":{"campo":"id","valor":"53664"},"cell":["53664","","","9Z66E","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53665","autoincrement":{"campo":"id","valor":"53665"},"cell":["53665","","","7WLOS","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53666","autoincrement":{"campo":"id","valor":"53666"},"cell":["53666","","","3BT5S","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53667","autoincrement":{"campo":"id","valor":"53667"},"cell":["53667","","","7E5E9","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53668","autoincrement":{"campo":"id","valor":"53668"},"cell":["53668","","","D4ZOI","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53669","autoincrement":{"campo":"id","valor":"53669"},"cell":["53669","","","URJ0L","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53670","autoincrement":{"campo":"id","valor":"53670"},"cell":["53670","","","DZOU1","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53671","autoincrement":{"campo":"id","valor":"53671"},"cell":["53671","","","93X6L","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53672","autoincrement":{"campo":"id","valor":"53672"},"cell":["53672","","","LM8JO","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53673","autoincrement":{"campo":"id","valor":"53673"},"cell":["53673","","","FGGVO","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53674","autoincrement":{"campo":"id","valor":"53674"},"cell":["53674","","","O2OB2","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53675","autoincrement":{"campo":"id","valor":"53675"},"cell":["53675","","","C6VH7","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53676","autoincrement":{"campo":"id","valor":"53676"},"cell":["53676","","","XS34O","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53677","autoincrement":{"campo":"id","valor":"53677"},"cell":["53677","","","SFI69","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53678","autoincrement":{"campo":"id","valor":"53678"},"cell":["53678","","","O42V9","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53679","autoincrement":{"campo":"id","valor":"53679"},"cell":["53679","","","ZYB87","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]},{"id":"53680","autoincrement":{"campo":"id","valor":"53680"},"cell":["53680","","","JP68X","0","Almoxarifado Central","1","ONU Furukawa","16\/04\/2022","","<i class=\"fa fa-clock-o\" aria-hidden=\"true\" style=\"color:#4CAF50;\"><\/i><font color=\"#4CAF50\"> Dispon\u00edvel<\/font>","136",""]}],"tot":[false]}
+
+
+URL:
+https://assinante.nmultifibra.com.br/aplicativo/patrimonio/action/action.php?action=recupera&id=53652
+
+FORM:
+action: recupera
+id: 53652
+
+RESPONSE:
+[{"tipo":"s","campo":"estado","valor":"1"},{"tipo":"i","campo":"responsavel_id","valor":"0"},{"tipo":"i","campo":"valor_residual","valor":""},{"tipo":"i","campo":"id","valor":"53652"},{"tipo":"i","campo":"serial_fornecedor","valor":""},{"tipo":"i","campo":"id_mac","valor":""},{"tipo":"i","campo":"serial","valor":"FH1XC"},{"tipo":"i","campo":"numero_nf","valor":"0"},{"tipo":"i","campo":"id_almoxarifado","valor":"1"},{"tipo":"i","campo":"id_filial","valor":"1"},{"tipo":"i","campo":"descricao","valor":"ONU Furukawa"},{"tipo":"i","campo":"data_aquisicao","valor":"16\/04\/2022"},{"tipo":"i","campo":"valor_bem","valor":""},{"tipo":"s","campo":"situacao","valor":"1"},{"tipo":"i","campo":"id_produto","valor":"136"},{"tipo":"i","campo":"departamento_id","valor":"0"},{"tipo":"i","campo":"id_movimento_produto","valor":"3229720"},{"tipo":"i","campo":"id_fornecedor","valor":"189"},{"tipo":"r","campo":"em_laboratorio","valor":"2"},{"tipo":"r","campo":"aguardando_instalacao","valor":"2"},{"tipo":"pri","valor":"53652"}]
+
+
+
+URL:
+https://assinante.nmultifibra.com.br/aplicativo/patrimonio/action/action.php?action=edit&id=53652
+
+FORM:
+id: 53652
+serial: FH1XC
+id_fornecedor: 189
+id_mac: 
+serial_fornecedor: 564a6s5d4a3d21q69w8d4a3sd1
+id_almoxarifado: 1
+id_filial: 1
+numero_nf: 0
+id_produto: 136
+valor_bem: 
+descricao: ONU Furukawa
+departamento_id: 
+responsavel_id: 
+data_aquisicao: 16/04/2022
+valor_residual: 
+situacao: 1
+estado: 1
+id_movimento_produto: 3229720
+validacao_form_patrimonio: form_patrimonio
+
+RESPONSE:
+{"type":"success","message":"Registro atualizado com sucesso!","id":"53652","atualiza_campos":[{"tipo":"i","campo":"valor_bem","valor":""}]}
+
+
+
+
+
+
+
+
+10.0.30.49
+
+10.0.30.48
+
+10.0.30.50
+
+10.0.41.2
+
+10.0.40.10
+
+10.0.40.38
