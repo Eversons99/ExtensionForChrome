@@ -33,47 +33,32 @@ function getSerialNumber(){
             chrome.tabs.sendMessage(tabs[0].id, {sns: allSNs, NF: nf, equipament: equipamentModel}, function(response){
                 const contentBtn = response.contentBtn
                 console.log(contentBtn)
-                //awaitProcessing(contentBtn)
+                awaitProcessing(contentBtn)
             })
         });
     })
 }
 
+
+
 function awaitProcessing(contentBtn){
     //Escondendo os botões
-    document.getElementsByTagName('textarea')[0].style.display = 'none'
-    document.getElementById('prosseguir').textContent = contentBtn
+    const myTextarea = document.querySelector('textarea').style.display = 'none'
+    myTextarea.value = ''
 
-    //Criando o novo botão para substituir
-    const divButton = document.querySelector('.btn')
-    const newBtn = document.createElement('button') 
-    const btnMain = document.getElementById('prosseguir')
-    newBtn.setAttribute('class', 'home-button')
-    newBtn.setAttribute('id', 'newInsert')
-    btnMain.disabled = true
+    const myBtn = document.getElementById('prosseguir').textContent = contentBtn
 
-    chrome.runtime.onMessage.addListener(
-        function(request) {
-            const myData = request.newTextContent
-            newBtn.innerHTML = myData
-            divButton.append(newBtn)
-            btnMain.style.display = 'none'
-        }
-    )
-
-    newBtn.addEventListener("click", ()=>{
-        const textarea = document.getElementsByTagName('textarea')[0]
-        const btnMain = document.getElementById('prosseguir')
-        btnMain.textContent = 'Prosseguir'
-        textarea.style.display = 'flex'
-        textarea.value = ''
-        btnMain.textContent = "Prosseguir"
-        btnMain.style.display = 'block'
-        newBtn.style.display = 'none'
-        btnMain.disabled = false
-    })
+   
 
 }
+
+chrome.runtime.onMessage.addListener(
+    function(response) {
+        console.log(response.dataSucess)
+        console.log(response.dataError)
+    }
+  );
+
 
 
 /*
