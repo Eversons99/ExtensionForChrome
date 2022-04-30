@@ -102,9 +102,14 @@ async function inputSN(allSNs, nf, equipament){
             let currentValue = {
                 message: myResponse.message
             }
-            
+            const myError = `Erro ao adicionar o registro "${serialNumbers[row]}" ERROR: ${currentValue.message}`
+            chrome.runtime.sendMessage({
+                error: myError
+                
+            });
+            //printResults (registerSuccess)
             //Para caso ocorra um erro na reposta do IXC
-            return alert(`Erro ao adicoionar o registro "${serialNumbers[row]}" ERROR: ${currentValue.message}`), printResults (registerSuccess)
+            break
         }
       
   
@@ -116,7 +121,6 @@ async function inputSN(allSNs, nf, equipament){
 
 function printResults (arraySuccess){
     const myDataSuccess = arraySuccess
- 
 
     chrome.runtime.sendMessage({
         dataSuccess: myDataSuccess}

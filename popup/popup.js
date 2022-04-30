@@ -55,10 +55,19 @@ function awaitProcessing(contentBtn){
 
 chrome.runtime.onMessage.addListener(
     function(response) {
-        const dataSuccess = response.dataSuccess
+        const alertError = response.error
+        if(alertError != undefined){
+            alert(alertError)
+        }
         
-        printResults(dataSuccess)
+    }
+);
 
+
+chrome.runtime.onMessage.addListener(
+    function(response) {
+        const dataSuccess = response.dataSuccess
+        printResults(dataSuccess)
     }
 );
 
@@ -86,7 +95,6 @@ function printResults(dataSuccess){
         tbody.append(row)
     }
     tableSucess.append(tbody)
-
 
 }
 
