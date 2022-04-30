@@ -28,6 +28,8 @@ function getSerialNumber(){
             }
         })
         
+        if (allSNs.length < 4) return alert("O IXC aceita no mínimo 4 regitros")
+
         //Encaminha uma mensagem para outra parte do meu projeto contendo o array de dados já tratado
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             chrome.tabs.sendMessage(tabs[0].id, {sns: allSNs, NF: nf, equipament: equipamentModel}, function(response){
@@ -46,19 +48,47 @@ function awaitProcessing(contentBtn){
     const myTextarea = document.querySelector('textarea').style.display = 'none'
     myTextarea.value = ''
 
-    const myBtn = document.getElementById('prosseguir').textContent = contentBtn
-
-   
+    const myBtn = document.getElementById('prosseguir2').textContent =  contentBtn
+    myBtn.disabled = true
 
 }
 
 chrome.runtime.onMessage.addListener(
     function(response) {
-        console.log(response.dataSucess)
-        console.log(response.dataError)
-    }
-  );
+        const dataSuccess = response.dataSuccess
+        
+        printResults(dataSuccess)
 
+    }
+);
+
+function printResults(dataSuccess){
+
+    const removeBtn = document.querySelector('.aux-remove').style.display = 'none'
+    const showTable = document.querySelector('.results').style.display = 'flex'
+
+    const myDataSuccess = dataSuccess
+    const tableSucess = document.querySelector('#results-success')
+    const tbody = document.createElement('tbody')
+    
+    const tableError = document.querySelector('#results-error')
+
+    for (let register of myDataSuccess){
+        const row = document.createElement('tr')        
+        const cod = document.createElement('td')
+        cod.textContent = register.codigo;
+        const sn = document.createElement('td')
+        sn.textContent = register.sn;
+        const message = document.createElement('td')
+        message.textContent = register.message
+     
+        row.append(cod, sn, message)
+        tbody.append(row)
+    }
+    tableSucess.append(tbody)
+
+
+}
 
 
 /*

@@ -90,3 +90,35 @@ select{
   border-radius: 10px;
   border-width: 2px;
 }
+
+h3{
+  text-align: center;
+  width: 90vh;
+}
+
+.results{
+  display: none;
+  flex-direction: column;
+  padding: 2vh;
+
+}
+
+table{
+  height: max-content;
+  width: 90vh;
+  margin-bottom : .5em;
+  table-layout: fixed;
+  text-align: center;
+  border-radius: 2vh;
+  border: 1px solid black;
+  background: #4e9ff4;
+  color: white;
+
+}
+
+tbody{
+  background: white;
+  color:black;
+  
+}
+
