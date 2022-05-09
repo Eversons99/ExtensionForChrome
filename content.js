@@ -14,11 +14,11 @@ async function inputSN(allSNs, nf, equipament){
     const noteNumber = nf
     const equipamentModel = equipament
     const itemsPerPage = serialNumbers.length
-
+    
     //Se algum dado não existir o programa para
     if(!serialNumbers || !noteNumber || !equipamentModel) return alert("Insira todos os dados necessários para prosseguir")
    
-    console.log(serialNumbers, noteNumber, itemsPerPage)
+    console.log(serialNumbers, noteNumber, equipamentModel, itemsPerPage)
 
     //Araray de contole
     const registerSuccess = []
@@ -27,7 +27,7 @@ async function inputSN(allSNs, nf, equipament){
     const url =  'https://assinante.nmultifibra.com.br/aplicativo';
     
     //Filtro //NECESSARRIO ATUALIZAR O FILTRO DE ACORDO COM OS DADOS INSERIDOS PELO USUARIO
-    let grid_params = [{"TB":"patrimonio.descricao","display":"Descrição","OP":"=","P":"Roteador Huawei WIFI WS5200","C":"AND","G":"_patrimonio.descricao"},{"TB":"patrimonio.data_aquisicao","display":"Data Aquisição","OP":"BE","P":"2022-04-24 00:00:00","P2":"2022-04-30 23:59:59","C":"AND","G":"_patrimonio.data_aquisicao"}]
+    let grid_params = [{"TB":"almox.descricao","display":"Almoxarifado","OP":"=","P":"Almoxarifado Central","C":"AND","G":"_almox.descricao"},{"TB":"patrimonio.descricao","display":"Descrição","OP":"=","P":`${equipamentModel}`,"C":"AND","G":"_patrimonio.descricao"},{"TB":"patrimonio.situacao","display":"Situação","OP":"IN","P":"\"1\",\"7\"","C":"AND","G":"_patrimonio.situacao"},{"TB":"patrimonio.numero_nf","display":"Número NF","OP":"=","P":`${noteNumber}`,"C":"AND","G":"_patrimonio.numero_nf"},{"TB":"patrimonio.serial_fornecedor","display":"Nº Série","OP":"=","P":"","C":"AND","G":"_patrimonio.serial_fornecedor"},{"TB":"patrimonio.serial_fornecedor","display":"Nº Série","OP":"NU","C":"OR","G":"_patrimonio.serial_fornecedor"},{"TB":"patrimonio.serial_fornecedor","display":"Nº Série","OP":"=","P":"0","C":"OR","G":"_patrimonio.serial_fornecedor"}]
     
     //Alteração do filtro para string (padrão aceito pelo IXC)
     let grid_paramsString = JSON.stringify(grid_params)
@@ -47,7 +47,11 @@ async function inputSN(allSNs, nf, equipament){
     //Retorna todos os registros, o número de registros retornados deve ser igual ao numero de SNS 
     let items = await fetch (`${url}/patrimonio/action/action.php?action=grid`, optRows);
     items = await items.json();
-    
+
+
+    console.log(items)
+
+
     console.log(items)
     //Se algum dado não existir o programa para
     if(!items.rows || items.rows.length == 0) return alert("O IXC Não retornou nenhum dado")
